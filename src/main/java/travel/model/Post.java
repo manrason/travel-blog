@@ -1,10 +1,8 @@
 package travel.model;
 
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
+import jakarta.persistence.*;
+
 import java.time.Instant;
 
 @Entity
@@ -13,19 +11,16 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long postId;
-    @NotBlank
     @Column
     private String title;
     @Lob
     @Column
-    @NotEmpty
     private String content;
     @Column
     private Instant createdOn;
     @Column
     private Instant updatedOn;
     @Column
-    @NotBlank
     private String username;
 
     public Long getPostId() {

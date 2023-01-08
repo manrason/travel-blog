@@ -1,9 +1,6 @@
 package travel.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table
